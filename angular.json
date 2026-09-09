@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "projects": {
+    "sabor-arte": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": { "browser": "src/main.ts", "tsConfig": "tsconfig.app.json", "assets": [{"glob":"**/*","input":"public"}], "styles": ["src/styles.css", "src/whatsapp.css"], "optimization": { "fonts": false } },
+          "configurations": {
+            "production": { "outputHashing": "all" },
+            "development": { "optimization": false, "sourceMap": true }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": { "builder": "@angular/build:dev-server", "configurations": { "production": { "buildTarget": "sabor-arte:build:production" }, "development": { "buildTarget": "sabor-arte:build:development" } }, "defaultConfiguration": "development" }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "e49e2afb-d2aa-4267-941f-401a67f10d1b"
+  }
+}

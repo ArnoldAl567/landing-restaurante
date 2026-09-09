@@ -1,0 +1,16 @@
+.wa-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 0 0 0 #25d36680;
+  animation: pulse 2s infinite;
+}
+
+.wa-icon svg {
+  width: 32px;
+  height: 32px;
+}
